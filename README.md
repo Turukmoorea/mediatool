@@ -23,11 +23,9 @@
 ## Overview / Übersicht
 
 This script, created by **Turukmoorea** on **14.12.2024**, is a utility designed for extracting **RAR files**. It was developed specifically to handle compressed RAR archives and has been confirmed to work reliably for these file types. The script is no longer actively supported as of the above date.
-
-Dieses Skript, erstellt von **Turukmoorea** am **14.12.2024**, ist ein Werkzeug zum Extrahieren von **RAR-Dateien**. Es wurde speziell für die Verarbeitung von komprimierten RAR-Archiven entwickelt und arbeitet zuverlässig mit diesen Dateitypen. Das Skript wird ab dem oben genannten Datum nicht mehr aktiv unterstützt.
-
 Development efforts have shifted to a modular project that is available [here](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool).
 
+Dieses Skript, erstellt von **Turukmoorea** am **14.12.2024**, ist ein Werkzeug zum Extrahieren von **RAR-Dateien**. Es wurde speziell für die Verarbeitung von komprimierten RAR-Archiven entwickelt und arbeitet zuverlässig mit diesen Dateitypen. Das Skript wird ab dem oben genannten Datum nicht mehr aktiv unterstützt.
 Die Entwicklungsarbeit wurde auf ein modulares Projekt verlagert, das [hier](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool) verfügbar ist.
 
 ---
