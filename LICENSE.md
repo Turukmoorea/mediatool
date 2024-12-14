@@ -4,7 +4,7 @@
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>  
 Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 
-Original text at https://www.gnu.org/licenses/gpl-3.0.txt
+Original file at https://www.gnu.org/licenses/gpl-3.0.txt
 
 ---
 
