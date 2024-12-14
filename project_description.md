@@ -225,3 +225,50 @@ Das langfristige Ziel des Projekts ist die Bereitstellung von **Mediatool** als 
 
 ### **4. Optimierung und Größe**
 - Unnötige Dateien und Abhängigkeiten werden entfernt, um die Größe der Binary zu minimieren.
+
+
+# Exit-Code-Konzept für Mediatool
+
+## 1. Allgemeine Fehler
+
+| **Exit-Code**       | **Variable**               | **Beschreibung**                                    |
+|----------------------|----------------------------|----------------------------------------------------|
+| `0`                 | `EXIT_SUCCESS`            | Erfolg, keine Fehler.                              |
+| `1`                 | `EXIT_GENERAL_ERROR`      | Allgemeiner Fehler (nicht näher spezifiziert).      |
+| `2`                 | `EXIT_INVALID_ARGUMENTS`  | Ungültige CLI-Argumente oder Optionen.              |
+| `3`                 | `EXIT_PERMISSION_DENIED`  | Fehlende Berechtigungen.                           |
+| `4`                 | `EXIT_INPUT_FILE_ERROR`   | Fehlerhafte oder unzugängliche Eingabedatei.        |
+| `5`                 | `EXIT_OUTPUT_FILE_ERROR`  | Fehlerhafte oder unzugängliche Ausgabedatei.        |
+| `6`                 | `EXIT_PROCESS_ABORTED`    | Abgebrochener Prozess (durch Benutzer:innen).       |
+
+---
+
+## 2. Modul-spezifische Fehler
+
+Jedes Modul erhält einen spezifischen Bereich für Exit-Codes:
+
+| **Modul**     | **Exit-Code**       | **Variable**                          | **Beschreibung**                                             |
+|---------------|---------------------|---------------------------------------|-------------------------------------------------------------|
+| **Install**   | `100`               | `EXIT_INSTALL_MISSING_DEPENDENCY`     | Fehlende Abhängigkeit.                                       |
+|               | `101`               | `EXIT_INSTALL_ERROR`                  | Installationsfehler.                                         |
+| **Purge**     | `110`               | `EXIT_PURGE_ERROR`                    | Fehler beim Bereinigen von Dateien.                         |
+| **Extract**   | `120`               | `EXIT_EXTRACT_INVALID_FORMAT`         | Ungültiges Archivformat.                                     |
+|               | `121`               | `EXIT_EXTRACT_PASSWORD_REQUIRED`      | Passwort erforderlich.                                       |
+| **Compress**  | `130`               | `EXIT_COMPRESS_ERROR`                 | Fehler beim Komprimieren.                                    |
+|               | `131`               | `EXIT_COMPRESS_UNSUPPORTED_FORMAT`    | Nicht unterstütztes Format.                                 |
+| **Rename**    | `140`               | `EXIT_RENAME_INVALID_PATTERN`         | Ungültiges Umbenennungsmuster.                              |
+|               | `141`               | `EXIT_RENAME_CONFLICT`                | Zielkonflikt.                                                |
+| **Codec**     | `150`               | `EXIT_CODEC_NOT_FOUND`                | Codec nicht gefunden.                                        |
+|               | `151`               | `EXIT_CODEC_FFMPEG_ERROR`             | Fehler bei ffmpeg.                                           |
+
+---
+
+## 3. System- oder Umgebungsfehler
+
+| **Exit-Code**       | **Variable**                   | **Beschreibung**                                   |
+|----------------------|-------------------------------|---------------------------------------------------|
+| `200`               | `EXIT_PYTHON_RUNTIME_ERROR`   | Python-Laufzeitfehler.                            |
+| `201`               | `EXIT_MISSING_EXTERNAL_TOOL`  | Fehlende externe Tools (z. B. ffmpeg).            |
+| `202`               | `EXIT_UNSUPPORTED_OS`         | Nicht unterstütztes Betriebssystem.               |
+| `203`               | `EXIT_CRITICAL_TOOL_ERROR`    | Kritischer Fehler im Tool selbst.                 |
+

@@ -5,18 +5,22 @@ mediatool/
 ├── project_description.md          # Description of the project and its goals
 ├── repository_topology             # ASCII-based overview of the file structure
 ├── create.sh                       # Script for creating a new project setup
-├── binary_source/                  # All sources and files needed for the binary
-│   ├── config/                     # Configuration files for the project
-│   │   └── config.py               # Main configuration module (e.g., settings and preferences)
+├── binary_source/                  # Main source files for the binary
+│   ├── config/                     # Configuration files for the application
+│   │   └── default_config.py       # Default configuration values (Python constants)
 │   ├── docs/                       # Documentation for the binary
 │   │   ├── license.txt             # Licensing information
 │   │   ├── manpage.md              # Manpage source for the CLI
 │   │   ├── overview.txt            # General overview of the binary's structure and purpose
-│   │   └── support.txt             # Support instructions for users
+│   │   ├── support.txt             # Support instructions for users
+│   │   └── version.txt             # Versioning details for the application
+│   ├── function/                   # Small helper modules and standalone scripts
+│   │   └── get_linux_distribution.py  # Script to detect the Linux distribution
 │   ├── install/                    # Installation and uninstallation scripts
 │   │   ├── install.sh              # Install script for bash environments
 │   │   ├── install.zsh             # Install script for zsh environments
 │   │   ├── install_alpine.sh       # Install script tailored for Alpine Linux
+│   │   ├── install_bash_get_shell  # Helper script for shell detection during installation
 │   │   └── purge.sh                # Script to remove all dependencies and clean up
 │   ├── lib/                        # Custom Python libraries for the project
 │   │   ├── __init__.py             # Init file for Python package structure
@@ -39,8 +43,13 @@ mediatool/
 │       ├── install.py              # Module for programmatic installation of dependencies
 │       ├── purge.py                # Module for programmatic removal of dependencies
 │       ├── rename.py               # Module for renaming media files
+│       ├── logger.py               # Centralized logging module
 │       └── utils.py                # Utility functions shared across modules
-├── docs/                           # Additional documentation for development and usage
+│   └── setup.cfg                   # Metadata and setup instructions for the application
+├── dev/                            # Development-specific configurations and logs
+│   ├── config/                     # Development configuration files (e.g., dev_config.ini)
+│   └── log/                        # Local log files for debugging during development
+├── documentation/                  # Additional documentation for development and usage
 │   ├── DEVELOPMENT/                # Development-focused documentation
 │   │   ├── architecture.md         # Explanation of the system architecture
 │   │   ├── build_process.md        # Build process details
@@ -58,35 +67,35 @@ mediatool/
 │       └── troubleshooting.md      # Troubleshooting common issues
 ├── lab/                            # Testing and experiments with various archive formats
 │   ├── 7z/                         # Tests for 7z archives
-│   │   ├── dummy1G.7z              # Example single-part 7z archive
+│   │   ├── dummy50M.7z             # Example single-part 7z archive
 │   │   └── multipart/              # Multi-part 7z archive testing
-│   │       ├── dummy3G.7z.001      # Part 1 of multi-part archive
+│   │       ├── dummy100M.7z.001    # Part 1 of multi-part archive
 │   │       └── ...                 # Remaining parts
 │   ├── rar/                        # Tests for rar archives
-│   │   ├── dummy1G.rar             # Example single-part rar archive
+│   │   ├── dummy50M.rar            # Example single-part rar archive
 │   │   └── multipart/              # Multi-part rar archive testing
-│   │       ├── dummy3G.part01.rar  # Part 1 of multi-part archive
+│   │       ├── dummy100M.part01.rar # Part 1 of multi-part archive
 │   │       └── ...                 # Remaining parts
 │   ├── raw/                        # Raw, uncompressed files for testing
-│   │   ├── dummy1G                 # Example 1GB file
-│   │   └── dummy3G                 # Example 3GB file
+│   │   ├── dummy100M               # Example 100MB file
+│   │   └── dummy50M                # Example 50MB file
 │   ├── tar.bz2/                    # Tests for tar.bz2 archives
-│   │   ├── dummy1G.tar.bz2         # Example single-part tar.bz2 archive
+│   │   ├── dummy50M.tar.bz2        # Example single-part tar.bz2 archive
 │   │   └── multipart/              # Multi-part tar.bz2 archive testing
-│   │       ├── dummy3G.tar.bz2.part00  # Part 1 of multi-part archive
-│   │       └── ...                     # Remaining parts
+│   │       ├── dummy100M.tar.bz2.part00  # Part 1 of multi-part archive
+│   │       └── ...                      # Remaining parts
 │   ├── tar.gz/                     # Tests for tar.gz archives
-│   │   ├── dummy1G.tar.gz          # Example single-part tar.gz archive
+│   │   ├── dummy50M.tar.gz         # Example single-part tar.gz archive
 │   │   └── multipart/              # Multi-part tar.gz archive testing
-│   │       ├── dummy3G.tar.gz.part00  # Part 1 of multi-part archive
-│   │       └── ...                     # Remaining parts
+│   │       ├── dummy100M.tar.gz.part00  # Part 1 of multi-part archive
+│   │       └── ...                      # Remaining parts
 │   ├── tar.xz/                     # Tests for tar.xz archives
-│   │   ├── dummy1G.tar.xz          # Example single-part tar.xz archive
+│   │   ├── dummy50M.tar.xz         # Example single-part tar.xz archive
 │   │   └── multipart/              # Multi-part tar.xz archive testing
-│   │       ├── dummy3G.tar.part00  # Part 1 of multi-part archive
-│   │       └── ...                 # Remaining parts
+│   │       ├── dummy100M.tar.part00      # Part 1 of multi-part archive
+│   │       └── ...                      # Remaining parts
 │   └── zip/                        # Tests for zip archives
-│       ├── dummy1G.zip             # Example single-part zip archive
+│       ├── dummy50M.zip            # Example single-part zip archive
 │       └── multipart/              # Multi-part zip archive testing
-│           ├── dummy3G.z01         # Part 1 of multi-part archive
-│           └── dummy3G.zip         # Last part of the archive
+│           ├── dummy100M.z01       # Part 1 of multi-part archive
+│           └── dummy100M.zip       # Last part of the archive

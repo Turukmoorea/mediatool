@@ -14,7 +14,7 @@ Run the following command to see available options:
 python3 mediatool.py --help
 ```
 
-More details are available in the [documentation](./docs/MANUAL/manpage.md).
+More details are available in the [documentation](documentation/MANUAL/manpage.md).
 
 ## Licensing Information for Dependencies
 

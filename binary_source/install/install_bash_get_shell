@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Script to detect the current shell
+
+# Error codes
+EXIT_SUCCESS=0
+EXIT_GENERAL_ERROR=1
+
+# Logging function
+log() {
+    local level="$1"
+    local message="$2"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message"
+}
+
+# Determine the current shell
+detect_shell() {
+    basename "$SHELL"
+}
+
+# Main logic
+log "INFO" "Starting the script to detect the shell."
+
+# Detect shell
+shell=$(detect_shell 2>/dev/null)
+if [ $? -ne 0 ] || [ -z "$shell" ]; then
+    log "ERROR" "Failed to detect the shell."
+    exit $EXIT_GENERAL_ERROR
+fi
+log "INFO" "Detected shell: $shell"
+
+# Output result (e.g., for a Python script)
+echo "$shell"
+
+log "INFO" "Script completed successfully."
+exit $EXIT_SUCCESS

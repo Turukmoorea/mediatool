@@ -10,5 +10,5 @@ git clone https://github.com/username/mediatool.git
 cd mediatool
 virtualenv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r setup.cfg
 ```
