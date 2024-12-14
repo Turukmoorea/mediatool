@@ -1,0 +1,92 @@
+mediatool/
+├── CONTRIBUTING.md                 # Guidelines for contributing to the project
+├── LICENSE                         # Project license information
+├── README.md                       # Main project README with overview and usage instructions
+├── project_description.md          # Description of the project and its goals
+├── repository_topology             # ASCII-based overview of the file structure
+├── create.sh                       # Script for creating a new project setup
+├── binary_source/                  # All sources and files needed for the binary
+│   ├── config/                     # Configuration files for the project
+│   │   └── config.py               # Main configuration module (e.g., settings and preferences)
+│   ├── docs/                       # Documentation for the binary
+│   │   ├── license.txt             # Licensing information
+│   │   ├── manpage.md              # Manpage source for the CLI
+│   │   ├── overview.txt            # General overview of the binary's structure and purpose
+│   │   └── support.txt             # Support instructions for users
+│   ├── install/                    # Installation and uninstallation scripts
+│   │   ├── install.sh              # Install script for bash environments
+│   │   ├── install.zsh             # Install script for zsh environments
+│   │   ├── install_alpine.sh       # Install script tailored for Alpine Linux
+│   │   └── purge.sh                # Script to remove all dependencies and clean up
+│   ├── lib/                        # Custom Python libraries for the project
+│   │   ├── __init__.py             # Init file for Python package structure
+│   │   ├── hashes.py               # Library for file hashing utilities
+│   │   └── utils.py                # General utility functions (e.g., logging, validation)
+│   ├── mediatool.py                # Main entry point for the CLI application
+│   └── modul/                      # Core modules of the application
+│       ├── codec.py                # Module for handling codec conversions
+│       ├── compress/               # Compression-related modules
+│       │   ├── compress.py         # Main compression module
+│       │   ├── compress_7z.py      # Module for handling 7z compression
+│       │   ├── compress_tar.py     # Module for handling tar compression
+│       │   └── compress_zip.py     # Module for handling zip compression
+│       ├── extract/                # Extraction-related modules
+│       │   ├── extract.py          # Main extraction module
+│       │   ├── extract_7z.py       # Module for handling 7z extraction
+│       │   ├── extract_rar.py      # Module for handling rar extraction
+│       │   ├── extract_tar.py      # Module for handling tar extraction
+│       │   └── extract_zip.py      # Module for handling zip extraction
+│       ├── install.py              # Module for programmatic installation of dependencies
+│       ├── purge.py                # Module for programmatic removal of dependencies
+│       ├── rename.py               # Module for renaming media files
+│       └── utils.py                # Utility functions shared across modules
+├── docs/                           # Additional documentation for development and usage
+│   ├── DEVELOPMENT/                # Development-focused documentation
+│   │   ├── architecture.md         # Explanation of the system architecture
+│   │   ├── build_process.md        # Build process details
+│   │   └── dev_setup.md            # Development environment setup instructions
+│   ├── MANUAL/                     # User manual and examples
+│   │   ├── cli_help.md             # CLI command help
+│   │   ├── examples.md             # Usage examples
+│   │   └── manpage.md              # Manpage documentation
+│   ├── REFERENCE/                  # Technical references
+│   │   ├── binary_structure.md     # Details on binary structure
+│   │   ├── dependencies.md         # List of dependencies
+│   │   └── modules.md              # Module structure and details
+│   └── SUPPORT/                    # Support-focused documentation
+│       ├── support_links.md        # Links to support resources
+│       └── troubleshooting.md      # Troubleshooting common issues
+├── lab/                            # Testing and experiments with various archive formats
+│   ├── 7z/                         # Tests for 7z archives
+│   │   ├── dummy1G.7z              # Example single-part 7z archive
+│   │   └── multipart/              # Multi-part 7z archive testing
+│   │       ├── dummy3G.7z.001      # Part 1 of multi-part archive
+│   │       └── ...                 # Remaining parts
+│   ├── rar/                        # Tests for rar archives
+│   │   ├── dummy1G.rar             # Example single-part rar archive
+│   │   └── multipart/              # Multi-part rar archive testing
+│   │       ├── dummy3G.part01.rar  # Part 1 of multi-part archive
+│   │       └── ...                 # Remaining parts
+│   ├── raw/                        # Raw, uncompressed files for testing
+│   │   ├── dummy1G                 # Example 1GB file
+│   │   └── dummy3G                 # Example 3GB file
+│   ├── tar.bz2/                    # Tests for tar.bz2 archives
+│   │   ├── dummy1G.tar.bz2         # Example single-part tar.bz2 archive
+│   │   └── multipart/              # Multi-part tar.bz2 archive testing
+│   │       ├── dummy3G.tar.bz2.part00  # Part 1 of multi-part archive
+│   │       └── ...                     # Remaining parts
+│   ├── tar.gz/                     # Tests for tar.gz archives
+│   │   ├── dummy1G.tar.gz          # Example single-part tar.gz archive
+│   │   └── multipart/              # Multi-part tar.gz archive testing
+│   │       ├── dummy3G.tar.gz.part00  # Part 1 of multi-part archive
+│   │       └── ...                     # Remaining parts
+│   ├── tar.xz/                     # Tests for tar.xz archives
+│   │   ├── dummy1G.tar.xz          # Example single-part tar.xz archive
+│   │   └── multipart/              # Multi-part tar.xz archive testing
+│   │       ├── dummy3G.tar.part00  # Part 1 of multi-part archive
+│   │       └── ...                 # Remaining parts
+│   └── zip/                        # Tests for zip archives
+│       ├── dummy1G.zip             # Example single-part zip archive
+│       └── multipart/              # Multi-part zip archive testing
+│           ├── dummy3G.z01         # Part 1 of multi-part archive
+│           └── dummy3G.zip         # Last part of the archive

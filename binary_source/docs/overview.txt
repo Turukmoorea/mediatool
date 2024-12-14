@@ -1,0 +1,5 @@
+Mediatool supports:
+  - Extract: Handle zip, rar, 7z, and tar archives.
+  - Compress: Create compressed files in supported formats.
+  - Rename: Organize and rename media files.
+  - Codec: Convert video and audio formats.

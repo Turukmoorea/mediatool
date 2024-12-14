@@ -1,0 +1,8 @@
+.idea
+lab/7z
+lab/rar
+lab/raw
+lab/tar*
+lab/zip
+
+!lab/lab_init.sh
