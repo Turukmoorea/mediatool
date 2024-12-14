@@ -24,7 +24,7 @@
 
 This script, created by **Turukmoorea** on **14.12.2024**, is a utility designed for extracting **RAR files**. It was developed specifically to handle compressed RAR archives and has been confirmed to work reliably for these file types. The script is no longer actively supported as of the above date.
 
-Development efforts have shifted to a successor project available [here](https://github.com/Turukmoorea/mediatool).
+Development efforts have shifted to a modular project that is available [here](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool).
 
 ---
 
@@ -79,10 +79,3 @@ Optionen:
 ## Limitations
 - This script only supports RAR file extraction.
 - Multi-part archives are processed only if properly named (e.g., `part1.rar`).
-
----
-
-## Deprecation Details
-
-The script is deprecated and no longer receives updates or support. Users are encouraged to migrate to the new and improved tool available at [mediatool repository](https://github.com/Turukmoorea/mediatool).
-
