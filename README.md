@@ -10,46 +10,29 @@
 =================================================================
 ```
 
-```
-=================================================================
-== Dieses Skript ist EOL und wird nicht mehr unterstützt.      ==
-== Es wird am Nachfolger gearbeitet. Mehr Informationen unter: ==
-== https://github.com/Turukmoorea/mediatool                    ==
-=================================================================
-```
-
 ---
 
-## Overview / Übersicht
+## Overview
 
 This script, created by **Turukmoorea** on **14.12.2024**, is a utility designed for extracting **RAR files**. It was developed specifically to handle compressed RAR archives and has been confirmed to work reliably for these file types. The script is no longer actively supported as of the above date.
-Development efforts have shifted to a modular project that is available [here](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool).
 
-Dieses Skript, erstellt von **Turukmoorea** am **14.12.2024**, ist ein Werkzeug zum Extrahieren von **RAR-Dateien**. Es wurde speziell für die Verarbeitung von komprimierten RAR-Archiven entwickelt und arbeitet zuverlässig mit diesen Dateitypen. Das Skript wird ab dem oben genannten Datum nicht mehr aktiv unterstützt.
-Die Entwicklungsarbeit wurde auf ein modulares Projekt verlagert, das [hier](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool) verfügbar ist.
+Development efforts have shifted to a modular project that is available [here](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool).
 
 ---
 
-## Features / Funktionen
+## Features
 
-### Supported Operations / Unterstützte Operationen:
+### Supported Operations:
 - Extract compressed RAR files.
 - Handle multi-part RAR archives.
 - Optionally delete original files after extraction.
 - Default source and destination directories.
 - Verbose mode for detailed logging.
 
-- Extrahieren von komprimierten RAR-Dateien.
-- Verarbeitung von mehrteiligen RAR-Archiven.
-- Optionale Löschung der Originaldateien nach der Extraktion.
-- Standard-Quell- und Zielverzeichnisse.
-- Ausführlicher Modus für detaillierte Protokollierung.
-
 ---
 
-### Usage / Nutzung
+### Usage
 
-#### English:
 Run the script with the following options:
 
 ```
@@ -65,7 +48,52 @@ Options:
   -v                 Enable verbose mode.
 ```
 
-#### Deutsch:
+---
+
+## Requirements
+- `unrar` tool for handling RAR files. The script will prompt to install it if missing.
+
+---
+
+## Limitations
+- This script only supports RAR file extraction.
+- Multi-part archives are processed only if properly named (e.g., `part1.rar`).
+
+---
+
+## 🚨 End of Life (EOL) Hinweis
+
+```
+=================================================================
+== Dieses Skript ist EOL und wird nicht mehr unterstützt.      ==
+== Es wird am Nachfolger gearbeitet. Mehr Informationen unter: ==
+== https://github.com/Turukmoorea/mediatool                    ==
+=================================================================
+```
+
+---
+
+## Übersicht
+
+Dieses Skript, erstellt von **Turukmoorea** am **14.12.2024**, ist ein Werkzeug zum Extrahieren von **RAR-Dateien**. Es wurde speziell für die Verarbeitung von komprimierten RAR-Archiven entwickelt und arbeitet zuverlässig mit diesen Dateitypen. Das Skript wird ab dem oben genannten Datum nicht mehr aktiv unterstützt.
+
+Die Entwicklungsarbeit wurde auf ein modulares Projekt verlagert, das [hier](https://github.com/Turukmoorea/mediatool/tree/dev_mediatool) verfügbar ist.
+
+---
+
+## Funktionen
+
+### Unterstützte Operationen:
+- Extrahieren von komprimierten RAR-Dateien.
+- Verarbeitung von mehrteiligen RAR-Archiven.
+- Optionale Löschung der Originaldateien nach der Extraktion.
+- Standard-Quell- und Zielverzeichnisse.
+- Ausführlicher Modus für detaillierte Protokollierung.
+
+---
+
+### Nutzung
+
 Das Skript kann mit folgenden Optionen verwendet werden:
 
 ```
@@ -83,15 +111,11 @@ Optionen:
 
 ---
 
-## Requirements / Anforderungen
-- `unrar` tool for handling RAR files. The script will prompt to install it if missing.
+## Anforderungen
 - `unrar`-Tool für die Verarbeitung von RAR-Dateien. Das Skript fordert zur Installation auf, falls es fehlt.
 
 ---
 
-## Limitations / Einschränkungen
-- This script only supports RAR file extraction.
-- Multi-part archives are processed only if properly named (e.g., `part1.rar`).
-
+## Einschränkungen
 - Dieses Skript unterstützt ausschließlich das Extrahieren von RAR-Dateien.
 - Mehrteilige Archive werden nur verarbeitet, wenn sie korrekt benannt sind (z. B. `part1.rar`).
